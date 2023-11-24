@@ -10,10 +10,10 @@ class BardModel {
   BardModel({this.system, this.message});
 
   BardModel.fromJson(Map<String, dynamic> json) {
-    if(json["system"] is String) {
+    if (json["system"] is String) {
       system = json["system"];
     }
-    if(json["message"] is String) {
+    if (json["message"] is String) {
       message = json["message"];
     }
   }

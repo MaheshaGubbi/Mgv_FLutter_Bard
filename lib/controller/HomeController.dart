@@ -3,6 +3,7 @@
  * Bengaluru.
  */
 import 'dart:convert';
+
 import 'package:expleobard/model/BardModel.dart';
 import 'package:expleobard/utils/Constants.dart';
 import 'package:get/get.dart';
@@ -36,16 +37,15 @@ class HomeController extends GetxController {
 
     final response = jsonDecode(request.body);
     if (response != null) {
-      if(response.containsKey("candidates")){
+      if (response.containsKey("candidates")) {
         final bardReplay = response["candidates"][0]["output"];
         var newHistory2 = BardModel(system: "bard", message: bardReplay);
         historyList.add(newHistory2);
-        print(bardReplay.toString());
-      }else{
-        var newHistory2 = BardModel(system: "bard", message: "Api issue, try again");
+      } else {
+        var newHistory2 =
+            BardModel(system: "bard", message: "Api issue, try again");
         historyList.add(newHistory2);
       }
-
     }
     isLoading.value = false;
   }
