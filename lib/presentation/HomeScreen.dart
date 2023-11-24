@@ -28,8 +28,7 @@ class _HomePageState extends State<HomeScreen> {
       backgroundColor: const Color(0xfff2f1f9),
       appBar: AppBar(
         centerTitle: true,
-        backgroundColor: Colors.white,
-        foregroundColor: Colors.white,
+        backgroundColor: Colors.blueAccent.withOpacity(0.5),
         leading: GestureDetector(
           onTap: () {
             controller.isLoading.value
@@ -60,7 +59,7 @@ class _HomePageState extends State<HomeScreen> {
         ],
       ),
       body: Padding(
-        padding: const EdgeInsets.all(8.0),
+        padding: const EdgeInsets.only(left:8.0,right: 8,bottom: 8),
         child: Column(
           children: [
             Expanded(
@@ -92,7 +91,7 @@ class _HomePageState extends State<HomeScreen> {
                     const SizedBox(height: 15),
                     customContainer(
                         textContent:
-                            "Welcome to flutter hero ask some thing  ❤️ "),
+                            " ❤️ Welcome to flutter hero ask some thing  ❤️ "),
                   ],
                 ),
               ],
@@ -106,10 +105,12 @@ class _HomePageState extends State<HomeScreen> {
               child: Row(children: [
                 Expanded(
                   child: TextFormField(
+                    keyboardType: TextInputType.text,
+                    textCapitalization: TextCapitalization.words,
                     focusNode: myFocusNode,
                     controller: textField,
                     decoration: const InputDecoration(
-                        hintText: "You can ask what you want",
+                        hintText: "Ask me anything today!",
                         border: OutlineInputBorder(
                           borderSide: BorderSide.none,
                         )),
@@ -171,4 +172,5 @@ class _HomePageState extends State<HomeScreen> {
     );
   }
 }
+
 

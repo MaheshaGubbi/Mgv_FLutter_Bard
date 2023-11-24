@@ -6,10 +6,9 @@ import 'package:flutter/material.dart';
  */
 
 class Constants {
-  // static const APIKEY = "ADD_YOUR_API_KEY";
-  static const APIKEY = "AIzaSyAqtgYQGVHDAfQWILDH7TP6O5au79kCCwU";
-  static const BaseURL =
-      "https://generativelanguage.googleapis.com/v1beta2/models/text-bison-001:generateText?key=YOUR_API_KEY";
+
+  static const APIKEY = "ADD_YOUR_API_KEY";
+  static const BaseURL = "https://generativelanguage.googleapis.com/v1beta2/models/text-bison-001:generateText?key=YOUR_API_KEY";
 
   static showCustomToast(BuildContext context, String message) {
     final snackBar = SnackBar(
